@@ -266,6 +266,19 @@ body {
     align-items: center;
 }
 
+.two-picture1 img{
+    width: 100%;
+    object-fit: cover;
+    align-items: center;
+}
+
+.center a{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .picture {
     overflow: hidden;
     transition: 1s;
