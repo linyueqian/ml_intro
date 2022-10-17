@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Introduction to Machine Learning</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/menu.css">     
 </head>
 <style>
 </style>
@@ -15,14 +16,29 @@
     <div class="nav">
         <ul>
             <li><a href="dog.html">&larr;</a></li>
+            <li><a href="feature.html">&rarr;</a></li>
         </ul>
+    </div>
+    <div class="main">
+        <input type="checkbox" id="check">
+        <span></span>
+        <span></span>
+        <span></span>
+        <div class="menu">
+            <li><a href="index.html">Beginning</a></li>
+            <li><a href="classification.html">Classification</a></li>
+            <li><a href="price.html">Regression</a></li>
+            <li><a href="feature1.html">Feature</a></li>
+            <li><a href="function.html">Model</a></li>
+            <li><a href="creation.html">Creation</a></li>
+        </div>
     </div>
 
     <div class="container">
         <div class="picture" style="margin-top: -50px; margin-bottom: -10px; max-height: 250px;">
             <img src="img/dog_channels.png" alt="dog with 3 channels">
         </div>
-        <div class="text">
+        <div class="text" style="width: 92%;">
             <h2>Computer cannot directly "see" the image, but it can get the numbers that represent the image in the form of
                 a RGB value matrix.</h2>
             <p>Each pixel in the image is represented by a 3D vector, which contains the RGB values of the pixel.</p>

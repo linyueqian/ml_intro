@@ -35,7 +35,7 @@ body {
     height: 50px;
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    right: 18px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     background-color: #fff;
@@ -44,6 +44,12 @@ body {
     display: flex;
     justify-content: space-between;  
     overflow: hidden;
+    /* width: 50px; */
+}
+
+.nav svg:hover{
+    fill: #005B4A;
+    transition: .5s;
 }
 
 .nav ul {
@@ -61,6 +67,7 @@ body {
     width: 100%;
     text-align: center;
     flex: auto;
+    padding: 0 1%;
 }
 
 .nav ul li a {
