@@ -1,11 +1,11 @@
-.main .menu{
+.main .menu {
     display: flex;
     justify-content: flex-end;
     flex-wrap: wrap;
     flex-direction: column
 }
 
-.main{
+.main {
     align-items: center;
     position: fixed;
     bottom: 20px;
@@ -19,7 +19,7 @@
     height: auto;
 }
 
-.menu{
+.menu {
     margin: 0;
     width: 0;
     overflow: hidden;
@@ -27,39 +27,43 @@
     height: 5px;
     position: relative;
     align-items: center;
-    
+
 }
-.main input:checked ~ .menu{
-    /* width: 500px; */
+
+.main input:checked~.menu {
     height: 120px;
     width: 160px;
     padding: 0 0 10px 0;
 }
-.menu li{
+
+.menu li {
     align-items: center;
     list-style: none;
     margin: 0 10px;
     font-family: 'Karla', sans-serif;
 }
-.menu li a{
+
+.menu li a {
     text-decoration: none;
     color: #A9A7A4;
-    /* text-transform: uppercase; */
     font-weight: 600;
     transition: 0.5s;
     font-family: 'Karla', sans-serif;
 }
-.menu li a:hover{
+
+.menu li a:hover {
     color: #000;
 }
-.main input{
+
+.main input {
     width: 50px;
     height: 40px;
     cursor: pointer;
     opacity: 0;
     z-index: 2;
 }
-.main span{
+
+.main span {
     position: absolute;
     top: 24px;
     right: 13px;
@@ -71,26 +75,31 @@
     transition: 0.5s;
 }
 
-.main input:checked ~ span{
+.main input:checked~span {
     background-color: #000;
     right: 40%;
 }
 
-.main input:checked{
+.main input:checked {
     width: 150px;
 }
-.main span:nth-child(2){
+
+.main span:nth-child(2) {
     transform: translateY(-8px);
 }
-.main input:checked ~ span:nth-child(2){
+
+.main input:checked~span:nth-child(2) {
     transform: translateY(0) rotate(-45deg);
 }
-.main span:nth-child(3){
+
+.main span:nth-child(3) {
     transform: translateY(8px);
 }
-.main input:checked ~ span:nth-child(3){
+
+.main input:checked~span:nth-child(3) {
     transform: translateY(0) rotate(45deg);
 }
-.main input:checked ~ span:nth-child(4){
+
+.main input:checked~span:nth-child(4) {
     display: none;
 }

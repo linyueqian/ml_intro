@@ -1,9 +1,4 @@
 @font-face {
-    font-family: 'Roboto';
-    src: url('../fonts/Roboto-Regular.ttf');
-}
-
-@font-face {
     font-family: 'Karla';
     src: url('../fonts/Karla-Regular.ttf');
 }
@@ -12,23 +7,9 @@ body {
     max-width: 75rem;
     margin: auto;
     background-image: linear-gradient(to right, #ece9e6, #f2eeed, #f6f4f4, #faf9fa, #ffffff);
-    /* background-image: linear-gradient(to right, #30a5c6, #4ab3d2, #60c1dd, #75cfe9, #88ddf5); */
-    /* background-image: linear-gradient(to right, #cd448e, #d15397, #d561a0, #d96ea8, #dd7ab1); */
     color: #2F2D2A;
     font-family: 'Karla', sans-serif;
     height: 100%;
-    /* overflow: hidden; */
-}
-
-
-.nav-bar {
-    overflow: hidden;
-    background-image: linear-gradient(to right, #faf9fa, #ffffff);
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 41%;
-    height: 63px;
 }
 
 .nav {
@@ -45,12 +26,6 @@ body {
     display: flex;
     justify-content: space-between;
     overflow: hidden;
-    /* width: 50px; */
-}
-
-.nav svg:hover {
-    fill: #005B4A;
-    transition: .5s;
 }
 
 .nav ul {
@@ -81,15 +56,6 @@ body {
     text-decoration: none;
 }
 
-@media screen and (max-width: 500px) {
-    .nav ul li a {
-        float: none;
-        display: block;
-        width: 100%;
-        text-align: left;
-    }
-}
-
 .nav ul li a:hover {
     color: #2F2D2A;
     transition: .5s;
@@ -99,11 +65,6 @@ body {
     color: #2F2D2A;
     transition: .5s;
 }
-
-/* .main { */
-/* padding-top: 150px; */
-/* margin-top: 100px; */
-/* } */
 
 .container {
     margin-top: 6%;
@@ -116,9 +77,7 @@ body {
     flex-direction: column;
 }
 
-
 .text {
-    /* border: 2px solid #00AC94; */
     padding: 10px;
     border-radius: 15px 50px 30px;
     align-items: center;
@@ -181,8 +140,8 @@ underline {
     text-align: center;
     align-items: center;
     justify-content: center;
-
 }
+
 .choice {
     display: flex;
     flex-wrap: wrap;
@@ -191,8 +150,8 @@ underline {
     flex-direction: row;
     width: 100%;
 }
+
 .point {
-    /* border: 2px solid #00AC94; */
     border: 2px solid rgba(0, 0, 0, .35);
     padding: 10px;
     margin: -10px;
@@ -207,6 +166,7 @@ underline {
     background-color: #fff;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, .5);
 }
+
 .point a {
     text-decoration: none;
     color: #000;
@@ -214,6 +174,7 @@ underline {
     transition: box-shadow 0.2s;
     font-size: 25px;
 }
+
 .point a:hover {
     color: #00AC94;
     transition: .5s;
@@ -244,8 +205,6 @@ underline {
 
 .shell {
     width: 90%;
-    /* height: 30%; */
-    /* height: 100%; */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -281,7 +240,6 @@ underline {
 }
 
 .box:hover {
-    /* flex-basis: 40%; */
     flex-basis: 200px;
     height: 400px;
 }
