@@ -1,7 +1,7 @@
 # Machine Learning Introduction website.
 
 ### This site is built for the mideterm project of [VMS288](https://kalexandrite.github.io/)
-## Author: [Yueqian Lin](mailto:yueqian.lin@dukekunshan.edu.cn)
+### Author: [Yueqian Lin](mailto:yueqian.lin@dukekunshan.edu.cn)
 
 
 Figures are drawn using [Matplotlib](https://matplotlib.org/)
