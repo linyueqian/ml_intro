@@ -65,13 +65,7 @@
             window.location = "dog.html";
         }
     }
-    function bindKeyDownListener() {
-        if (document.addEventListener)
-            document.addEventListener("keydown", handleKeyboardNav, false);
-        else if (document.attachEvent)
-            el.attachEvent("onkeydown", handleKeyboardNav);
-    }
-    bindKeyDownListener();
+    document.onkeydown = handleKeyboardNav;
 </script>
 
 </html>

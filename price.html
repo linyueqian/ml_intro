@@ -53,5 +53,16 @@
 
 
 </body>
-
+<script>
+    function handleKeyboardNav(e) {
+        if (!e) e = window.event;
+        var kc = e.keyCode;
+        if (kc == 37) {
+            window.location.href = "feature1.html";
+        } else if (kc == 39) {
+            window.location.href = "housing.html";
+        }
+    }
+    document.onkeydown = handleKeyboardNav;
+</script>
 </html>

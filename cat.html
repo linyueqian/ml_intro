@@ -24,7 +24,7 @@
         <div class="text">
             <h2>You have chosen the wrong picture!</h2>
             <h3>But this is not a quiz, so you can try <a href="overview-example.html">
-                    <underline>again</underline>
+                    again
                 </a>.</h3>
         </div>
         <a class="picture" href="overview-example.html">
@@ -35,5 +35,14 @@
 
 
 </body>
-
+<script>
+    function handleKeyboardNav(e) {
+        if (!e) e = window.event;
+        var kc = e.keyCode;
+        if (kc == 37) {
+            window.location.href = "overview-example.html";
+        }
+    }
+    document.onkeydown = handleKeyboardNav;
+</script>
 </html>

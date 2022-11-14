@@ -51,9 +51,18 @@
             <a href="feature.html">&rarr;</a>
         </div>
     </div>
-
-
-
 </body>
+<script>
+    function handleKeyboardNav(e) {
+        if (!e) e = window.event;
+        var kc = e.keyCode;
+        if (kc == 37) {
+            window.location.href = "dog.html";
+        } else if (kc == 39) {
+            window.location.href = "feature.html";
+        }
+    }
+    document.onkeydown = handleKeyboardNav;
+</script>
 
 </html>
