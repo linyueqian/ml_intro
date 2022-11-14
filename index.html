@@ -8,6 +8,7 @@
     <title>Introduction to Machine Learning</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/overview.css">
+    <script src="js/main.js"></script>
 </head>
 <style>
 </style>
@@ -22,10 +23,21 @@
             <h2 style="margin-top: -30px;">An <mark>Easy</mark> and <mark>Fun</mark> Journey!</h2>
         </div>
         <a href="overview-example.html" class="banner-btn">Begin</a>
-        <a href="overview-before.html" class="banner-btn">Not Begin</a>
+        <a href="overview-before.html" class="banner-btn" id="box1">Not Begin</a>
     </div>
 
 
 </body>
+<script>
+    let btn = document.getElementById("box1");
+
+    function escape() {
+        this.style.position = "absolute";
+        this.style.left = (Math.random() * 500) + "px";
+        this.style.top = (Math.random() * 400) + "px";
+    }
+
+    btn.addEventListener('mouseover', escape);
+</script>
 
 </html>
