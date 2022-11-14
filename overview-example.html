@@ -8,6 +8,8 @@
     <title>Introduction to Machine Learning</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" type="text/css" href="css/loading-bar.css" />
+    <script type="text/javascript" src="js/loading-bar.js"></script>
 </head>
 <style>
 </style>
@@ -19,7 +21,8 @@
             <li><a href="dog.html">&rarr;</a></li>
         </ul>
     </div>
-    <div id="progressive-bar"></div>
+    <div data-path="M0 0 L105 0 L105 1" class="ldBar" data-value="0"
+        data-stroke="data:ldbar/res,gradient(0,1,#9df,#9fd,#df9,#fd9)"></div>
     <div class="main">
         <input type="checkbox" id="check">
         <span></span>
@@ -52,6 +55,23 @@
     </div>
 
 </body>
+<script>
+    function handleKeyboardNav(e) {
+        if (!e) e = window.event;
+        var kc = e.keyCode;
+        if (kc == 37) {
+            window.location = "index.html";
+        } else if (kc == 39) {
+            window.location = "dog.html";
+        }
+    }
+    function bindKeyDownListener() {
+        if (document.addEventListener)
+            document.addEventListener("keydown", handleKeyboardNav, false);
+        else if (document.attachEvent)
+            el.attachEvent("onkeydown", handleKeyboardNav);
+    }
+    bindKeyDownListener();
 </script>
 
 </html>
