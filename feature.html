@@ -12,6 +12,37 @@
     <script type="text/javascript" src="js/loading-bar.js"></script>
 </head>
 <style>
+    .collapsible {
+        background-color: rgba(0, 0, 0, .5);
+        color: white;
+        cursor: pointer;
+        padding: 18px;
+        width: 91%;
+        border: none;
+        text-align: center;
+        outline: none;
+        font-size: 15px;
+        border-radius: 15px;
+    }
+
+    .active,
+    .collapsible:hover {
+        background-color: #00AC94;
+    }
+
+    .content {
+        padding: 1%;
+        display: none;
+        overflow: hidden;
+        background-color: white;
+        margin-bottom: 10px;
+        border-radius: 15px;
+        width: 89%;
+    }
+
+    .content a {
+        color: black;
+    }
 </style>
 
 <body>
@@ -35,7 +66,8 @@
             <li><a href="creation.html">Creation</a></li>
         </div>
     </div>
-    <div data-path="M0 0 L105 0 L105 1" class="ldBar" data-value="30" data-stroke="data:ldbar/res,gradient(0,1,#9df,#9fd,#df9,#fd9)" ></div>
+    <div data-path="M0 0 L105 0 L105 1" class="ldBar" data-value="30"
+        data-stroke="data:ldbar/res,gradient(0,1,#9df,#9fd,#df9,#fd9)"></div>
     <div class="container">
         <div class="text" style="margin-top: -50px">
             <h2>Thus, the computer can learn from the data to make predictions from extracting the features from the
@@ -44,11 +76,12 @@
                 from the numbers. Algorithms like nearest neighbor, linear regression, and logistic regression can be
                 used to make predictions.</p>
             <h2>For example, in <underline>speech recognition</underline>, the computer can learn from the
-                <underline>features</underline> in sound waves to recognize the speech.</h2>
-                <div class="choice">
-                    <a href="feature1.html">More...</a>
-                    <a href="price.html">No MORE!</a>
-                </div>
+                <underline>features</underline> in sound waves to recognize the speech.
+            </h2>
+            <div class="choice">
+                <a href="feature1.html">More...</a>
+                <a href="price.html">No MORE!</a>
+            </div>
         </div>
         <div class="two-picture two-picture1" style="width: 95%; margin-top: -20px;">
             <div class="picture " style="flex: 43%;">
@@ -60,8 +93,13 @@
                 <p class="center">MFCC (a kind of feature extracted) of "Duke"</p>
             </div>
         </div>
-    </div>
-    </div>
+
+        <button type="button" class="collapsible">Waveform Visulization</button>
+        <div class="content">
+            <iframe width="100%" height="550px" scrolling="no" frameborder="no" allow="autoplay"
+                src="waveform.html"></iframe>
+            </div>
+        </div>
 </body>
 <script>
     function handleKeyboardNav(e) {
@@ -74,6 +112,20 @@
         }
     }
     document.onkeydown = handleKeyboardNav;
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    }
 </script>
 
 </html>

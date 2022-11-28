@@ -1,0 +1,54 @@
+body {
+  background-color: #fff;
+}
+
+#file-input {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 3;
+  font-family: 'Roboto', sans-serif;
+}
+
+#canvas {
+  position: fixed;
+  top: 40px;
+  width: 98%;
+  height: 98%;
+}
+
+audio {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 3;
+}
+
+#name {
+  position: fixed;
+  top: 0;
+  right: 20px;
+  z-index: 3;
+  color: #000;
+  font-family: 'Karla', sans-serif;
+}
+
+
+/* @keyframes bg {
+  0%{ background-position: 0 0; }
+  100%{ background-position: 8px 8px; }
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**/
