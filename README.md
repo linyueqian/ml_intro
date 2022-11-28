@@ -12,14 +12,14 @@ Pictures are all from [Canva](https://www.canva.com/) with Education License.
 
 The menu is modified from a project by [@Catalin-Hranovschi](https://codepen.io/Catalin-Hranovschi/pen/ydogWP?editors=1100).
 
-The way to embed Jupyter Notebook in Github Pages is from [this post](https://elc.github.io/posts/embed-interactive-notebooks/)
+The way to embed Jupyter Notebook in Github Pages is from [this post](https://elc.github.io/posts/embed-interactive-notebooks/).
 
-Upload.js is from [this post](https://upload.io/upload-js)
+Upload.js is from [this post](https://upload.io/upload-js).
 
-Waveform visulization adopted from [this repo](https://github.com/gg-1414/music-visualizer)
+Waveform visulization adopted from [this repo](https://github.com/gg-1414/music-visualizer).
 ## Update log for fianl project
 
 - [x] Add the progressive bar
 - [x] Add the keyboard control
 - [x] Add fun "not begin" button feature
-
+- [x] Add waveform visualization

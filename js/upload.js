@@ -11,18 +11,17 @@ async function onFileSelected(event) {
     const [ file ]    = event.target.files
     const { fileUrl } = await upload.uploadFile(file, { 
       onProgress: ({ progress }) => 
-        h1.innerHTML = `File uploading... ${progress}%`
+        h2.innerHTML = `File uploading... ${progress}%`
     })
     
     // 4) Display uploaded file URL.
-    h1.innerHTML = `
+    h2.innerHTML = `
+      Step 1: Upload an image
+      <br>
       File uploaded:
-      <br/>
-      <br/>
-      <a href="${fileUrl}" target="_blank">${fileUrl}</a>` 
-    
+      <a href="${fileUrl}" target="_blank">${fileUrl}</a>`
   } catch(e) {
     // 5) Display errors.
-    h1.innerHTML = `Please try another file:<br/><br/>${e.message}`
+    h2.innerHTML = `Please try another file:<br/><br/>${e.message}`
   }
 }
