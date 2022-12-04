@@ -10,15 +10,17 @@
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" type="text/css" href="css/loading-bar.css" />
     <script type="text/javascript" src="js/loading-bar.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 </head>
 <style>
 </style>
 
-<body>
+<body id="body" class="light">
     <div class="nav">
         <ul>
             <li><a href="feature1.html">&larr;</a></li>
             <li><a href="housing.html">&rarr;</a></li>
+            <li><button type="button" id="dark_light" onclick="toggleDarkLight()">🌛</button></li>
         </ul>
     </div>
     <div class="main">
@@ -35,7 +37,7 @@
             <li><a href="creation.html">Creation</a></li>
         </div>
     </div>
-    <div data-path="M0 0 L105 0 L105 1" class="ldBar" data-value="50" data-stroke="data:ldbar/res,gradient(0,1,#9df,#9fd,#df9,#fd9)" ></div>
+    <div data-path="M0 0 L140 0 L140 1" class="ldBar" data-value="50" data-stroke="data:ldbar/res,gradient(0,1,#9df,#9fd,#df9,#fd9)" ></div>
     <div class="container" style="margin-top: 30px;">
         <div class="picture">
             <img src="img/price_once.gif" alt="price" >

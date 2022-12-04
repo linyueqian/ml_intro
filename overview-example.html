@@ -10,18 +10,20 @@
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" type="text/css" href="css/loading-bar.css" />
     <script type="text/javascript" src="js/loading-bar.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 </head>
 <style>
 </style>
 
-<body>
+<body id="body" class="light">
     <div class="nav">
         <ul>
             <li><a href="index.html">&larr;</a></li>
             <li><a href="dog.html">&rarr;</a></li>
+            <li><button type="button" id="dark_light" onclick="toggleDarkLight()">🌛</button></li>
         </ul>
     </div>
-    <div data-path="M0 0 L105 0 L105 1" class="ldBar" data-value="0"
+    <div data-path="M0 0 L140 0 L140 1" class="ldBar" data-value="0"
         data-stroke="data:ldbar/res,gradient(0,1,#9df,#9fd,#df9,#fd9)"></div>
     <div class="main">
         <input type="checkbox" id="check">
@@ -50,7 +52,6 @@
             <h2>Can you tell which picture is a <underline>dog</underline> and which is a <underline>cat</underline>?
             </h2>
             <p>Click the picture of dog 🐶.</p>
-
         </div>
     </div>
 

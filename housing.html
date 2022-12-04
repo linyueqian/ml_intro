@@ -10,15 +10,17 @@
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" type="text/css" href="css/loading-bar.css" />
     <script type="text/javascript" src="js/loading-bar.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 </head>
 <style>
 </style>
 
-<body>
+<body id="body" class="light">
     <div class="nav">
         <ul>
             <li><a href="price.html">&larr;</a></li>
             <li><a href="housing_2.html">&rarr;</a></li>
+            <li><button type="button" id="dark_light" onclick="toggleDarkLight()">🌛</button></li>
         </ul>
     </div>
     <div class="main">
@@ -35,14 +37,16 @@
             <li><a href="creation.html">Creation</a></li>
         </div>
     </div>
-    <div data-path="M0 0 L105 0 L105 1" class="ldBar" data-value="60" data-stroke="data:ldbar/res,gradient(0,1,#9df,#9fd,#df9,#fd9)" ></div>
+    <div data-path="M0 0 L140 0 L140 1" class="ldBar" data-value="60"
+        data-stroke="data:ldbar/res,gradient(0,1,#9df,#9fd,#df9,#fd9)"></div>
     <div class="container">
         <div class="picture" style="margin-top: -50px;">
             <img src="img/price.png" alt="a increasing price trendline illustraion" style="height: 300px;">
         </div>
         <div class="text" style="margin-bottom: -5px;">
             <h2>Now let's look at the housing price in an imaginary city in the past.</h2>
-            <h2>A similar <underline>linear regression</underline> model can be used to predict the price in the future! </h2>
+            <h2>A similar <underline>linear regression</underline> model can be used to predict the price in the future!
+            </h2>
 
         </div>
         <div class="point">
@@ -50,11 +54,11 @@
             <p>It seems that the price of the house is <underline>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                     &nbsp; &nbsp; </underline> over time.</p>
             <div class="choice"> <a href="housing_2.html">increasing</a>
-            <a href="housing_1.html">decreasing</a>
+                <a href="housing_1.html">decreasing</a>
             </div>
         </div>
 
-      
+
 
     </div>
 

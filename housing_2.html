@@ -10,15 +10,17 @@
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" type="text/css" href="css/loading-bar.css" />
     <script type="text/javascript" src="js/loading-bar.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 </head>
 <style>
 </style>
 
-<body>
+<body id="body" class="light">
     <div class="nav">
         <ul>
             <li><a href="housing.html">&larr;</a></li>
             <li><a href="function.html">&rarr;</a></li>
+            <li><button type="button" id="dark_light" onclick="toggleDarkLight()">🌛</button></li>
         </ul>
     </div>
     <div class="main">
@@ -35,7 +37,7 @@
             <li><a href="creation.html">Creation</a></li>
         </div>
     </div>
-    <div data-path="M0 0 L105 0 L105 1" class="ldBar" data-value="70" data-stroke="data:ldbar/res,gradient(0,1,#9df,#9fd,#df9,#fd9)" ></div>
+    <div data-path="M0 0 L140 0 L140 1" class="ldBar" data-value="70" data-stroke="data:ldbar/res,gradient(0,1,#9df,#9fd,#df9,#fd9)" ></div>
     <div class="container">
         <div class="picture" style="margin-top: -50px;">
             <img src="img/price_model.png" alt="a line acrossing the price data points" style="height: 300px;">
@@ -49,7 +51,7 @@
                 line equation!</h2>
         </div>
         <div class="point" style="margin-top: -20px;">
-            <a href="function.html">&rarr;</a>
+            <a href="function.html">Next</a>
         </div>
     </div>
 
