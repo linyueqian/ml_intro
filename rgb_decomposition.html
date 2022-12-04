@@ -10,17 +10,78 @@
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" type="text/css" href="css/loading-bar.css" />
     <script type="text/javascript" src="js/loading-bar.js"></script>
-    <script src="https://js.upload.io/upload-js/v2"></script>
-    <script src="js/upload.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script src="js/grade.js"></script>
 </head>
 <style>
+    /* The grid: Four equal columns that floats next to each other */
+    .column {
+        align-items: center;
+        float: left;
+        width: 25%;
+        padding: 10px;
+    }
+
+    /* Style the images inside the grid */
+    .column img {
+        opacity: 0.8;
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        align-items: center;
+    }
+
+    .column img:hover {
+        opacity: 1;
+    }
+
+
+    .row {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    /* The expanding image container (positioning is needed to position the close button and the text) */
+    .img-container {
+        position: relative;
+        display: none;
+    }
+
+    /* Expanding image text */
+    #imgtext {
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        color: white;
+        font-size: 20px;
+    }
+
+    /* Closable button inside the image */
+    .closebtn {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        color: white;
+        font-size: 35px;
+        cursor: pointer;
+    }
 </style>
 
-<body>
+<body id="body" class="gradient-wrap">
     <div class="nav">
         <ul>
-            <li><a href="dog.html">&larr;</a></li>
+            <li><a href="classification.html">&larr;</a></li>
             <li><a href="feature.html">&rarr;</a></li>
+            <li><button type="button" id="dark_light" onclick="toggleDarkLight()">🌛</button></li>
         </ul>
     </div>
     <div class="main">
@@ -37,15 +98,34 @@
             <li><a href="creation.html">Creation</a></li>
         </div>
     </div>
-    <div class="container">
-
+    <div class="container" style="margin-top: -20px;">
         <div class="text" style="width: 95%;">
-            <h2>Step 1: Upload an image <input type="file" onchange="onFileSelected(event)" /> </h2>
-            <h2>Step 2: Copy the link into the corresponding position in the block below</h2>
+            <h2>Chosse an image and explore its RGB decomposition.</h2>
         </div>
-        <iframe src="https://nbviewer.org/github/linyueqian/ml_intro/blob/master/rgb_public.ipynb" width="850" height="1000"></iframe>
-        <div class="point">
-            <a href="feature.html">&rarr;</a>
+
+        <div class="row center point" style="margin-top: -25px;">
+            <div class="column column0">
+                <img src="img/nature.jpg" alt="Nature" onclick="displayImg(this);">
+            </div>
+            <div class="column">
+                <img src="img/light.jpg" alt="Lights" onclick="displayImg(this);">
+            </div>
+            <div class="column">
+                <img src="img/sunset.jpg" alt="Sunset" onclick="displayImg(this);">
+            </div>
+            <div class="column">
+                <img src="img/mountain.jpg" alt="Mountain" onclick="displayImg(this);">
+            </div>
+        </div>
+        <div class="img-container point" style="margin-top: -20px;">
+            <!-- Close the image -->
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+
+            <!-- Expanded image -->
+            <img id="expandedImg" style="width:100%">
+
+            <!-- Image text -->
+            <div id="imgtext" style="color: #000;"></div>
         </div>
     </div>
 </body>
@@ -60,8 +140,75 @@
         }
     }
     document.onkeydown = handleKeyboardNav;
-    const h2 = document.getElementsByTagName("h2")[0]
-    const uploadButton = document.getElementsByTagName("input")[0]
+
+    function getTwoColor(img) {
+        var canvas = document.createElement('canvas');
+        var context = canvas.getContext && canvas.getContext('2d');
+        var data, width, height, length, i = -4,
+            count = 0,
+            rgb = {
+                r: 0,
+                g: 0,
+                b: 0
+            },
+            result;
+
+        if (!context) {
+            return null;
+        }
+
+        height = canvas.height = img.naturalHeight || img.offsetHeight || img.height;
+        width = canvas.width = img.naturalWidth || img.offsetWidth || img.width;
+
+        context.drawImage(img, 0, 0);
+
+        try {
+            data = context.getImageData(0, 0, width, height);
+        } catch (e) {
+            /* security error, img on diff domain */
+            return null;
+        }
+
+        length = data.data.length;
+
+        while ((i += 4 * 10) < length) {
+            ++count;
+            rgb.r += data.data[i];
+            rgb.g += data.data[i + 1];
+            rgb.b += data.data[i + 2];
+        }
+
+        // ~~ used to floor values
+        rgb.r = ~~(rgb.r / count);
+        rgb.g = ~~(rgb.g / count);
+        rgb.b = ~~(rgb.b / count);
+
+        result = 'rgb(' + rgb.r + ', ' + rgb.g + ', ' + rgb.b + ')';
+
+        result2 = 'rgb(' + (255 - rgb.r) + ', ' + (255 - rgb.g) + ', ' + (255 - rgb.b) + ')';
+
+        return [result, result2];
+    }
+
+    function displayImg(imgs) {
+        // get the expanded image
+        var expandImg = document.getElementById("expandedImg");
+        // get the image text
+        var imgText = document.getElementById("imgtext");
+        // get the path before image
+        var path = imgs.src.substring(0, imgs.src.lastIndexOf("/") + 1);
+        // delte the file extension
+        var imgName = imgs.src.split("/").pop().split(".")[0];
+        // show the image fileneame +_channels.png
+        expandImg.src = path + imgName + "_channels.png";
+        imgText.innerHTML = imgs.alt;
+        expandImg.parentElement.style.display = "block";
+
+        // compute the background gradient based on the image
+        var color = getTwoColor(imgs);
+        document.getElementById("body").style.background = "linear-gradient(to right, " + color[0] + ", " + color[1] + ")";
+
+    }
 </script>
 
 

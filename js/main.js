@@ -1,6 +1,6 @@
 // on page load
-window.onload = function() {
-    if(localStorage.getItem("theme") == "dark") {
+window.onload = function () {
+    if (localStorage.getItem("theme") == "dark") {
         document.getElementById("body").className = "dark";
         document.getElementById("dark_light").innerHTML = "🌞";
     }
@@ -20,4 +20,6 @@ function toggleDarkLight() {
     // change button text
     var button = document.getElementById("dark_light");
     button.innerHTML = currentClass == "dark" ? "🌛" : "🌞";
-  }
+}
+
+

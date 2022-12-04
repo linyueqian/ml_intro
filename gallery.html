@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Introduction to Machine Learning</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" type="text/css" href="css/loading-bar.css" />
+    <script type="text/javascript" src="js/loading-bar.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+<style>
+    .collapsible {
+        background-color: rgba(0, 0, 0, .5);
+        color: white;
+        cursor: pointer;
+        padding: 18px;
+        width: 91%;
+        border: none;
+        text-align: center;
+        outline: none;
+        font-size: 15px;
+        border-radius: 15px;
+    }
+
+    .active,
+    .collapsible:hover {
+        background-color: #00AC94;
+    }
+
+    .content {
+        padding: 1%;
+        display: none;
+        overflow: hidden;
+        background-color: white;
+        margin-bottom: 10px;
+        border-radius: 15px;
+        width: 89%;
+    }
+
+    .content a {
+        color: black;
+    }
+
+    .color-change {
+        -webkit-animation: colorchange 20s infinite alternate;
+    }
+
+    @-webkit-keyframes colorchange {
+        0% {
+
+            color: #e65537;
+        }
+
+        10% {
+
+            color: #e8853c;
+        }
+
+        20% {
+
+            color: #f0da72;
+        }
+
+        30% {
+
+            color: #d35400;
+        }
+
+        40% {
+
+            color: #d9efbb;
+        }
+
+        50% {
+
+            color: #7e89f1;
+        }
+
+        60% {
+
+            color: #a281e8;
+        }
+
+        70% {
+
+            color: #2980b9;
+        }
+
+        80% {
+
+            color: #4182d9;
+        }
+
+        90% {
+
+            color: #3a568f;
+        }
+
+        100% {
+
+            color: #000;
+        }
+    }
+</style>
+
+<body id="body" class="light">
+    <div class="nav">
+        <ul>
+            <li><a href="creation.html">&larr;</a></li>
+            <li><a href="final.html">&rarr;</a></li>
+            <li><button type="button" id="dark_light" onclick="toggleDarkLight()">🌛</button></li>
+        </ul>
+    </div>
+    <div class="main">
+        <input type="checkbox" id="check">
+        <span></span>
+        <span></span>
+        <span></span>
+        <div class="menu">
+            <li><a href="index.html">Beginning</a></li>
+            <li><a href="classification.html">Classification</a></li>
+            <li><a href="price.html">Regression</a></li>
+            <li><a href="feature1.html">Feature</a></li>
+            <li><a href="function.html">Model</a></li>
+            <li><a href="creation.html">Creation</a></li>
+        </div>
+    </div>
+    <div data-path="M0 0 L140 0 L140 1" class="ldBar" data-value="93"
+        data-stroke="data:ldbar/res,gradient(0,1,#9df,#9fd,#df9,#fd9)"></div>
+    <div class="container">
+        <div class="text" style="margin-top: -50px">
+            <h2 class="color-change">The Gallery</h2>
+        </div>
+        <div class="two-picture two-picture1" style="width: 95%; margin-top: -20px; flex-direction: row;">
+            <a class="picture " style="flex: 43%; height: 100%;" href="rgb_decomposition.html">
+                <img src="img/dog_channels.png" alt="waveform of audio">
+                <p class="center">RGB Decompositon</p>
+            </a>
+            <a class="picture " style="flex: 43%; height: 100%;" href="rgb_decomposition.html">
+                <img src="img/dog_channels.png" alt="waveform of audio">
+                <p class="center">RGB Decompositon</p>
+            </a>
+        </div>
+        <div class="two-picture two-picture1" style="width: 95%; flex-direction: row;">
+            <a class="picture " style="flex: 43%; height: 100%;" href="rgb_decomposition.html">
+                <img src="img/dog_channels.png" alt="waveform of audio">
+                <p class="center">RGB Decompositon</p>
+            </a>
+            <a class="picture " style="flex: 43%; height: 100%;" href="rgb_decomposition.html">
+                <img src="img/dog_channels.png" alt="waveform of audio">
+                <p class="center">RGB Decompositon</p>
+            </a>
+        </div>
+        <!-- <button type="button" class="collapsible">Waveform Visulization</button> -->
+        <div class="content">
+            <iframe width="100%" height="550px" scrolling="no" frameborder="no" allow="autoplay"
+                src="waveform.html"></iframe>
+        </div>
+    </div>
+</body>
+<script>
+    function handleKeyboardNav(e) {
+        if (!e) e = window.event;
+        var kc = e.keyCode;
+        if (kc == 37) {
+            window.location.href = "creation.html";
+        } else if (kc == 39) {
+            window.location.href = "final.html";
+        }
+    }
+    document.onkeydown = handleKeyboardNav;
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    }
+</script>
+
+</html>
