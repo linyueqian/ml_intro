@@ -13,38 +13,6 @@
     <script type="text/javascript" src="js/main.js"></script>
 </head>
 <style>
-    .collapsible {
-        background-color: rgba(0, 0, 0, .5);
-        color: white;
-        cursor: pointer;
-        padding: 18px;
-        width: 91%;
-        border: none;
-        text-align: center;
-        outline: none;
-        font-size: 15px;
-        border-radius: 15px;
-    }
-
-    .active,
-    .collapsible:hover {
-        background-color: #00AC94;
-    }
-
-    .content {
-        padding: 1%;
-        display: none;
-        overflow: hidden;
-        background-color: white;
-        margin-bottom: 10px;
-        border-radius: 15px;
-        width: 89%;
-    }
-
-    .content a {
-        color: black;
-    }
-
     .color-change {
         -webkit-animation: colorchange 20s infinite alternate;
     }
@@ -137,28 +105,24 @@
         </div>
         <div class="two-picture two-picture1" style="width: 95%; margin-top: -20px; flex-direction: row;">
             <a class="picture " style="flex: 43%; height: 100%;" href="rgb_decomposition.html">
-                <img src="img/dog_channels.png" alt="waveform of audio">
+                <img src="img/dog_channels_c.png" alt="RGB channels illustration of dog">
                 <p class="center">RGB Decompositon</p>
             </a>
-            <a class="picture " style="flex: 43%; height: 100%;" href="rgb_decomposition.html">
-                <img src="img/dog_channels.png" alt="waveform of audio">
-                <p class="center">RGB Decompositon</p>
-            </a>
-        </div>
-        <div class="two-picture two-picture1" style="width: 95%; flex-direction: row;">
-            <a class="picture " style="flex: 43%; height: 100%;" href="rgb_decomposition.html">
-                <img src="img/dog_channels.png" alt="waveform of audio">
-                <p class="center">RGB Decompositon</p>
-            </a>
-            <a class="picture " style="flex: 43%; height: 100%;" href="rgb_decomposition.html">
-                <img src="img/dog_channels.png" alt="waveform of audio">
-                <p class="center">RGB Decompositon</p>
+            <a class="picture " style="flex: 43%; height: 100%;" href="waveform.html">
+                <!-- crop the image -->
+                <img src="img/voice_c.png" alt="waveform of audio">
+                <p class="center">Waveform Illustration</p>
             </a>
         </div>
-        <!-- <button type="button" class="collapsible">Waveform Visulization</button> -->
-        <div class="content">
-            <iframe width="100%" height="550px" scrolling="no" frameborder="no" allow="autoplay"
-                src="waveform.html"></iframe>
+        <div class="two-picture two-picture1" style="width: 95%; flex-direction: row; height: 100%;">
+            <a class="picture " style="flex: 43%; height: 100%;" href="playground.html">
+                <img src="img/price_model_c.png" alt="waveform of audio" style="height: 36vh">
+                <p class="center">Model Playground</p>
+            </a>
+            <a class="picture" style="flex: 43%; height: 100%;" href="https://linyueqian.github.io/rgb_decomposition">
+                <iframe src="https://jupyterlite.github.io/demo/repl/index.html?kernel=python" width="100%" height="100%" style="display: flex; height: 35vh; border: none"></iframe>
+                <p class="center">Python Exploration</p>
+            </a>
         </div>
     </div>
 </body>
@@ -173,20 +137,6 @@
         }
     }
     document.onkeydown = handleKeyboardNav;
-    var coll = document.getElementsByClassName("collapsible");
-    var i;
-
-    for (i = 0; i < coll.length; i++) {
-        coll[i].addEventListener("click", function () {
-            this.classList.toggle("active");
-            var content = this.nextElementSibling;
-            if (content.style.display === "block") {
-                content.style.display = "none";
-            } else {
-                content.style.display = "block";
-            }
-        });
-    }
 </script>
 
 </html>

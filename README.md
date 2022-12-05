@@ -13,7 +13,8 @@
 - [x] Add changeable background
 - [x] Add dark mode
 - [x] Add neural network playground
-- [x] Add the photo gallery
+- [x] Add the photo gallery in RGB decomposition
+- [x] Add the example gallery page
 
 ## References
 
