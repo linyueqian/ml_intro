@@ -23,7 +23,8 @@
             <li><button type="button" id="dark_light" onclick="toggleDarkLight()">🌛</button></li>
         </ul>
     </div>
-    <div data-path="M0 0 L140 0 L140 1" class="ldBar" data-value="80" data-stroke="data:ldbar/res,gradient(0,1,#9df,#9fd,#df9,#fd9)" ></div>
+    <div data-path="M0 0 L140 0 L140 1" class="ldBar" data-value="80"
+        data-stroke="data:ldbar/res,gradient(0,1,#9df,#9fd,#df9,#fd9)"></div>
     <div class="main">
         <input type="checkbox" id="check">
         <span></span>
@@ -52,13 +53,23 @@
             <h2>You can think of it as a "black box" where you input the data and get the prediction.</h2>
             <p>But the "hidden" part are combinations of many <span class="underline">simple functions</span>.</p>
         </div>
+
         <div class="point" style="margin-top: -20px;">
-            <h2>If you want to build a neural network by yourself, you can click the <underline>"Playground"</underline>.</h2>
-            <div class="choice"> <a href="https://playground.tensorflow.org/">Playground</a>
+            <h2>If you want to build a neural network by yourself, you can click the <underline>"Playground"</underline>
+                .</h2>
+            <div class="choice">
                 <a href="creation.html">Next Topic</a>
             </div>
         </div>
-        
+
+        <button type="button" class="collapsible">Playground</button>
+        <div class="content">
+            <center><iframe style="height: 120vh; width: 99%;" widtth="100%" scrolling="no" frameborder="no" allow="autoplay"
+                src="playground.html"></iframe>
+            </center>
+        </div>
+    </div>
+
     </div>
 
 
@@ -75,6 +86,20 @@
         }
     }
     document.onkeydown = handleKeyboardNav;
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    }
 </script>
 
 </html>

@@ -15,6 +15,7 @@
 - [x] Add neural network playground
 - [x] Add the photo gallery in RGB decomposition
 - [x] Add the example gallery page
+- [x] Add the neural network playground page
 
 ## References
 
@@ -32,4 +33,6 @@ Upload.js is from [this post](https://upload.io/upload-js).
 Waveform visulization is adopted from [this repo](https://github.com/gg-1414/music-visualizer).
 
 Change background gradient idea is inspired from [Grade.js](https://github.com/benhowdle89/grade) (this js does not work for my case).
+
+The neural network playground is adopted from [this repo](https://github.com/tensorflow/playground).
 

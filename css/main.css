@@ -361,3 +361,35 @@ mark:before {
     transition: .5s;
     box-shadow: none;
 }
+
+.collapsible {
+    background-color: rgba(0, 0, 0, .5);
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 91%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 15px;
+    border-radius: 15px;
+}
+
+.active,
+.collapsible:hover {
+    background-color: #00AC94;
+}
+
+.content {
+    padding: 1%;
+    display: none;
+    overflow: hidden;
+    background-color: white;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    width: 89%;
+}
+
+.content a {
+    color: black;
+}
