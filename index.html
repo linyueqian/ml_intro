@@ -37,8 +37,11 @@
         let vh = window.innerHeight;
         // get horizontal width
         let vw = window.innerWidth;
-        this.style.left = (Math.random() * vw) + "px";
-        this.style.top = (Math.random() * vh) + "px";
+        // set boundaries
+        this.style.left =(Math.random() * 0.9 * vw) + "px";
+        this.style.top = (Math.random() * 0.9 * vh) + "px";
+        // slow down the speed
+        this.style.transition = "all 1s";
 
     }
 

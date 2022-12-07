@@ -10,15 +10,17 @@
     <link rel="stylesheet" href="css/menu.css"> 
     <link rel="stylesheet" type="text/css" href="css/loading-bar.css" />
     <script type="text/javascript" src="js/loading-bar.js"></script>
+    <script src="js/main.js"></script>
 </head>
 <style>
 </style>
 
-<body>
+<body id="body" class="light">
     <div class="nav">
         <ul>
             <li><a href="index.html">&larr;</a></li>
             <li><a href="overview-example.html">&rarr;</a></li>
+            <li><button type="button" id="dark_light" onclick="toggleDarkLight()">🌛</button></li>
         </ul>
     </div>
     <div class="main">
@@ -46,8 +48,16 @@
         <a class="point" href="overview-example.html">Continue</a>
     </div>
 
-
-
 </body>
+<script>
+    function handleKeyboardNav(e) {
+        if (e.keyCode == 37) {
+            window.location.href = "index.html";
+        } else if (e.keyCode == 39) {
+            window.location.href = "overview-example.html";
+        }
+    }
+    document.addEventListener('keydown', handleKeyboardNav);
+</script>
 
 </html>

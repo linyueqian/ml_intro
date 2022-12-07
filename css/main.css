@@ -369,9 +369,10 @@ mark:before {
     padding: 18px;
     width: 91%;
     border: none;
+    margin-bottom: 10px;
     text-align: center;
     outline: none;
-    font-size: 15px;
+    font-size: 20px;
     border-radius: 15px;
 }
 
