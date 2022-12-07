@@ -33,8 +33,13 @@
 
     function escape() {
         this.style.position = "absolute";
-        this.style.left = (Math.random() * 500) + "px";
-        this.style.top = (Math.random() * 400) + "px";
+        // get vetical height
+        let vh = window.innerHeight;
+        // get horizontal width
+        let vw = window.innerWidth;
+        this.style.left = (Math.random() * vw) + "px";
+        this.style.top = (Math.random() * vh) + "px";
+
     }
 
     btn.addEventListener('mouseover', escape);
