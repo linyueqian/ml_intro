@@ -31,7 +31,10 @@
 <script>
     let btn = document.getElementById("box1");
 
+        
     function escape() {
+        // slow down the speed
+        this.style.transition = "all 1s";
         this.style.position = "absolute";
         // get vetical height
         let vh = window.innerHeight;
@@ -40,8 +43,6 @@
         // set boundaries
         this.style.left =(Math.random() * 0.9 * vw) + "px";
         this.style.top = (Math.random() * 0.9 * vh) + "px";
-        // slow down the speed
-        this.style.transition = "all 1s";
 
     }
 

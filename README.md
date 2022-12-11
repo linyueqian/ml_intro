@@ -15,6 +15,8 @@
 - [x] Add neural network playground
 - [x] Add the photo gallery in RGB decomposition
 - [x] Add the example gallery page
+- [x] Add the gallery into menu
+- [x] Change the margin of div to make it more coherent
 
 ## References
 

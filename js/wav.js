@@ -7,12 +7,12 @@ window.onload = function() {
 
   file.onchange = function() {
 
-    const files = this.files; // FileList containing File objects selected by the user (DOM File API)
+    const files = this.files;
     console.log('FILES[0]: ', files[0])
-    audio.src = URL.createObjectURL(files[0]); // Creates a DOMString containing the specified File object
+    audio.src = URL.createObjectURL(files[0]); 
 
     const name = files[0].name
-    h3.innerText = `${name}` // Sets <h3> to the name of the file
+    h3.innerText = `${name}`
 
     ///////// <CANVAS> INITIALIZATION //////////
     canvas.width = window.innerWidth;
@@ -32,6 +32,7 @@ window.onload = function() {
 
 
     /////////////// ANALYSER FFTSIZE ////////////////////////
+    // The FFTSize is the size of the frequency domain, or how many values you will have for the
     analyser.fftSize = 16384;
 
 
