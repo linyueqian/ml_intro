@@ -17,6 +17,7 @@
 - [x] Add the example gallery page
 - [x] Add the gallery into menu
 - [x] Change the margin of div to make it more coherent
+- [x] Add embeded video in the last page
 
 ## References
 
@@ -37,3 +38,4 @@ Change background gradient idea is inspired from [Grade.js](https://github.com/b
 
 The neural network playground is adopted from [this repo](https://github.com/tensorflow/playground).
 
+The embeded video is from [embed.so](https://embed.so/).
