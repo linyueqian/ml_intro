@@ -4,7 +4,7 @@
 
 ### Author: [Yueqian Lin](mailto:yueqian.lin@dukekunshan.edu.cn)
 
-## Update log for the fianl project
+## Update log for the final project
 
 - [x] Add the colorful progressive bar
 - [x] Add the keyboard control
