@@ -11,7 +11,7 @@
     <script type="text/javascript" src="js/loading-bar.js"></script>
 </head>
 <style>
-    body{
+    body {
         background-image: url(img/final_bg.png);
     }
 </style>
@@ -26,24 +26,52 @@
     <div class="container">
         <div class="picture">
             <img src="img/robot.gif" alt="robot saying goodbye to you" style="height: 100px;">
-            </div>
+        </div>
         <div class="text">
             <h1>Thank you for your interest in machine learning!</h1>
             <h2>Here are some resources for you to learn more about machine learning.</h2>
             <ul>
                 <li><a href="https://www.coursera.org/learn/machine-learning">Machine Learning by Andrew Ng</a></li>
-                <li><a href="https://www.coursera.org/specializations/deep-learning">Deep Learning Specialization by Andrew Ng</a></li>
-                <li><a href="https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdfg">Pattern Recognition and Machine Learning by Christopher Bishop</a></li>
-                <li><a href="https://probml.github.io/pml-book/book0.html">Machine Learning: A Probabilistic Perspective by Kevin Murphy</a></li>
+                <li><a href="https://www.coursera.org/specializations/deep-learning">Deep Learning Specialization by
+                        Andrew Ng</a></li>
+                <li><a
+                        href="https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdfg">Pattern
+                        Recognition and Machine Learning by Christopher Bishop</a></li>
+                <li><a href="https://probml.github.io/pml-book/book0.html">Machine Learning: A Probabilistic Perspective
+                        by Kevin Murphy</a></li>
             </ul>
         </div>
         <div class="point">
             <a href="think.html">The End?!</a>
-    
+        </div>
+        <button type="button" class="collapsible" style="background-color: rgba(255, 255, 255, .85); color: #2F2D2A; width: 95%; box-shadow: 10px 10px 20px rgba(0, 0, 0, .5);">Comments</button>
+        <div class="content" style="width: 93%; margin-top: -5px;">
+            <script src="https://giscus.app/client.js" data-repo="linyueqian/ml_intro" data-repo-id="R_kgDOIO5pzg"
+            data-category="General" data-category-id="DIC_kwDOIO5pzs4CTDv6" data-mapping="pathname" data-strict="0"
+            data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom"
+            data-theme="light_protanopia" data-lang="en" crossorigin="anonymous" async>
+            </script>
+        </div>
     </div>
 
 
 
 </body>
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    }
+</script>
 
 </html>
