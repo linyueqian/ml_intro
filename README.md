@@ -19,7 +19,7 @@
 - [x] Change the margin of the div elements to make it more coherent
 - [x] Add a rethinking machine learning page
 - [x] Add embedded video on the rethinking machine learning page
-- [x] Add comment block in the final page
+- [x] Add a comment block on the final page
 
 ## References
 
